@@ -23,12 +23,10 @@ struct IconRight: View {
     }
 }
 
-struct IconRight_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack {
-            IconRight(imageName: "circle.grid.cross.fill")
-                .padding()
-            Spacer()
-        }
+#Preview {
+    VStack {
+        IconRight(imageName: "circle.grid.cross.fill")
+            .padding()
+        Spacer()
     }
 }
