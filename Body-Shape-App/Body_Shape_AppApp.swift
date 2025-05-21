@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct Body_Shape_AppApp: App {
+    @State var isShowingSplash: Bool = true
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            if isShowingSplash {
+                SplashView(isShowingSplash: $isShowingSplash)
+            } else {
+                MainView()
+            }
         }
     }
 }

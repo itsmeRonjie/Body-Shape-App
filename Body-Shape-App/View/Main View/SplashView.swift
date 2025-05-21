@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SplashView: View {
+    @Binding var isShowingSplash: Bool
     var body: some View {
         ZStack {
             BackgroundOfSpashView()
@@ -23,12 +24,12 @@ struct SplashView: View {
                     .font(.system(size: 48, weight: .bold, design: .serif))
                     .padding(.horizontal)
                 
-                LastRowOfSplashView()
+                LastRowOfSplashView(isShowSpashScreen: $isShowingSplash)
             }
         }
     }
 }
 
 #Preview {
-    SplashView()
+    SplashView(isShowingSplash: .constant(true))
 }

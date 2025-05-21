@@ -8,15 +8,21 @@
 import SwiftUI
 
 struct DashboardView: View {
+    @Binding var isShowDashboard: Bool
+    
     var body: some View {
         VStack {
-            IconRight(
-                imageName: "circle.grid.cross.fill",
-                angle: 45)
+            Button {
+                isShowDashboard.toggle()
+            } label: {
+                IconRight(
+                    imageName: "circle.grid.cross.fill",
+                    angle: 45)
+            }
             .padding()
             
             VStack(alignment: .leading, spacing: 20) {
-                WelcomeMessageView(userName: "Emily")
+                WelcomeMessageView(userName: "Ronjie")
                 
                 WeightView(
                     weight: 61.2,
@@ -43,5 +49,5 @@ struct DashboardView: View {
 }
 
 #Preview {
-    DashboardView()
+    DashboardView(isShowDashboard: .constant(true))
 }

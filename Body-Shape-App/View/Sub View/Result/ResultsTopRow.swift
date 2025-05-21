@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ResultsTopRow: View {
+    @Binding var isShowDashboard: Bool
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -20,15 +21,19 @@ struct ResultsTopRow: View {
                     .foregroundColor(.gray)
             }
             Spacer()
-            Image(systemName: "arrow.uturn.backward")
-                .foregroundColor(.white)
-                .padding()
-                .background(Color.black)
-                .clipShape(Circle())
+            Button {
+                isShowDashboard.toggle()
+            } label: {
+                Image(systemName: "arrow.uturn.backward")
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.black)
+                    .clipShape(Circle())
+            }
         }
     }
 }
 
 #Preview {
-    ResultsTopRow()
+    ResultsTopRow(isShowDashboard: .constant(false))
 }

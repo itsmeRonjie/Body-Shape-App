@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct ResultView: View {
+    @Binding var isShowDashboard: Bool
     let selectedWeightUnits = "lb"
+    
     var body: some View {
         VStack {
             VStack(spacing: 0) {
-                ResultsTopRow()
+                ResultsTopRow(isShowDashboard: $isShowDashboard)
                     .padding()
                 CalendarBarView(
                     dailyData: [
@@ -103,5 +105,5 @@ struct ResultView: View {
 }
 
 #Preview {
-    ResultView()
+    ResultView(isShowDashboard: .constant(false))
 }

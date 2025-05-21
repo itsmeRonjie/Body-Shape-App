@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct LastRowOfSplashView: View {
+    @Binding var isShowSpashScreen: Bool
     var body: some View {
         HStack {
-            ArrowInCircle()
+            ArrowInCircle(isShowSpashScreen: $isShowSpashScreen)
             Spacer()
         }
         .padding()
@@ -18,5 +19,5 @@ struct LastRowOfSplashView: View {
 }
 
 #Preview {
-    LastRowOfSplashView()
+    LastRowOfSplashView(isShowSpashScreen: .constant(true))
 }
