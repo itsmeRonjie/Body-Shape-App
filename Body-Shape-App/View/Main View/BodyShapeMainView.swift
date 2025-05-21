@@ -25,6 +25,12 @@ struct BodyShapeMainView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
             
+            DataSummaryView(
+                arrow: "arrow.down",
+                calories: "4.569",
+                numberOfPeopleShowing: 2
+            )
+
             Spacer()
         }
     }
