@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BodyShapeMainView: View {
+struct DashboardView: View {
     var body: some View {
         VStack {
             IconRight(
@@ -37,12 +37,11 @@ struct BodyShapeMainView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
             
-            
             Spacer()
         }
     }
 }
 
 #Preview {
-    BodyShapeMainView()
+    DashboardView()
 }
