@@ -11,7 +11,7 @@ import SwiftUI
 struct Body_Shape_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            BodyShapeMainView()
+            SplashView()
         }
     }
 }
